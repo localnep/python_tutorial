@@ -30,3 +30,9 @@ is_prime(number)
 for i in range(2,number+1):
     if(is_prime2(i) == True):
         print(i," ")
+        
+##################################################################################################################        
+        
+values = [10, 30] #range of values
+result = lambda values: [i for i in range(min(values), max(values)) if True in [True for j in range(2,10) if i % j == 0]]
+result(values)
