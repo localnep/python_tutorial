@@ -11,7 +11,7 @@ Created on Sat Jul  2 22:25:01 2022
 
 """
 lambda: Kullan at fonksiyonu, özellikle apply ve map ile birlikte kullanılır
-map: fonksiyon verilerek döngü yazmaktan kurtarır (java'da foreach yapısına benzer)
+map: Bir listedeki tüm ögelere bir fonksiyonu uygular. 
 filter: “true” dönen elemanlar için bir liste oluştururken
 reduce: genel olarak bir liste üzerinde işlemler yapmak için kullanılır.                                           
 """
