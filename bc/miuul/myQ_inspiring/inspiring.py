@@ -47,3 +47,46 @@ set(a[3]) # {'m'} - a[3]'ün elemanı eşsiz olsun
 set(a) # a listesi eşsiz olsun (sondaki 'ab' elemanı uçtu)
 
 ########################################################################################################################
+#Aşağıdaki dönüşümü yapan bir fonksiyon bekleniyor. (resource: codewars)
+# accum("abcd") -> "A-Bb-Ccc-Dddd"
+# accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+# accum("cwAt") -> "C-Ww-Aaa-Tttt"
+
+def accum(string):
+    new_string = ""
+    for index, letter in enumerate(string):
+        if index == 0:
+            new_string += letter.upper()
+        else:
+            new_string += "-" + letter.upper() + letter.lower() * index
+    return new_string
+
+accum("RqaEzty")
+
+#with ListComprehension
+
+def accum(string):
+    return "".join([letter.upper()+"-" if index == 0 else "-" + letter.upper() + letter.lower() * index for
+                    index, letter in enumerate(string)])
+
+accum("RqaEzty")
+
+def accum(text):
+    new_text = ""
+    for i in range(len(text)):
+        if i == 0:
+            new_text += (text[i]*(i+1)).capitalize()
+        else:
+            new_text += "-" + (text[i]*(i+1)).capitalize()
+    print(new_text)
+
+def accum(text):
+    new_text = "".join([(text[i]*(i+1)).capitalize() if i == 0 else "-" + (text[i]*(i+1)).capitalize()
+                        for i in range(len(text))])
+    print(new_text)
+
+
+accum("DeNeMe")
+# Output: D-Ee-Nnn-Eeee-Mmmmm-Eeeeee
+
+########################################################################################################################
