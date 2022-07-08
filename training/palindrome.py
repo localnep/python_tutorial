@@ -4,7 +4,7 @@ Created on Wed Jun 22 21:48:34 2022
 
 @author: erdog
 """
-..
+.
 """
 Palindromik sayı ve kelime, iki taraftan okunduğu zaman okunuş yönüyle aynı olan sayılar ve kelimelerdir.
 Örnek: 1, 4, 8, 99, 101, 363, 4004, 1221, 9889 vb.
